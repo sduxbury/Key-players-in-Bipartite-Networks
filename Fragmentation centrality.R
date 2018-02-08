@@ -27,7 +27,9 @@ fragmentation.centrality.bipartite<-function(affiliation.mat){
 require(statnet)
 require(igraph)
 require(tnet)
-
+  if(nrow(affiliation.mat)>=100 | 
+     ncol(affiliation.mat)>=100)(warning('Large network; computation may take a few minutes.'))
+    
 mafia<-as.matrix(affiliation.mat)
 fakenet<-graph_from_incidence_matrix(mafia)
 
