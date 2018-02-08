@@ -32,7 +32,7 @@ require(igraph)
 require(tnet)
  
   if(nrow(affiliation.mat)>=150 | 
-     ncol(affiliation.mat)>=150)(warning('Large network; computation may take a long time.'))
+     ncol(affiliation.mat)>=150)(warning('Large network; computation may take a few minutes.'))
   
 davis<-affiliation.mat
 projnet<-as.edgelist.sna(davis)
